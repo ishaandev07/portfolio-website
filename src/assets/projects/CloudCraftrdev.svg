@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260">
+  <rect width="100%" height="100%" fill="#05060a" />
+  <g transform="translate(24,30)">
+    <rect x="0" y="0" width="120" height="72" rx="8" fill="#071025" />
+    <path d="M20 46h60v6H20z" fill="#7b2cff" />
+    <circle cx="18" cy="18" r="10" fill="#00d4ff" />
+  </g>
+  <text x="24" y="136" fill="#7b2cff" font-family="Orbitron, Inter, sans-serif" font-size="18" font-weight="700">CloudCraftrdev</text>
+  <text x="24" y="160" fill="#cbd5e1" font-family="Inter, sans-serif" font-size="13">Stack: React + TypeScript</text>
+  <text x="24" y="182" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">Purpose: Cloud deployment & dev tooling</text>
+</svg>

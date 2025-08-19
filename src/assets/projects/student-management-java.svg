@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260">
+  <rect width="100%" height="100%" fill="#05060a" />
+  <g transform="translate(24,28)">
+    <rect x="0" y="0" width="88" height="56" rx="6" fill="#0b0712" />
+    <text x="8" y="34" fill="#ffb86b" font-family="Inter, sans-serif" font-size="14">Java</text>
+  </g>
+  <text x="24" y="136" fill="#ffb86b" font-family="Orbitron, Inter, sans-serif" font-size="18" font-weight="700">student-management-java</text>
+  <text x="24" y="160" fill="#e6eef8" font-family="Inter, sans-serif" font-size="13">Stack: Java (Spring Boot)</text>
+  <text x="24" y="182" fill="#94a3b8" font-family="Inter, sans-serif" font-size="12">Purpose: CRUD student management</text>
+</svg>

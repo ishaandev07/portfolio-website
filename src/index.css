@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Theme Variables */
+:root {
+  --bg: #05060a;
+  --panel: rgba(255, 255, 255, 0.04);
+  --glass: rgba(255, 255, 255, 0.06);
+  --muted: #94a3b8;
+  --text: #e6eef8;
+  --neon: linear-gradient(90deg, #00d4ff, #b32cff, #ff2d95);
+  --neon-a: #00d4ff;
+  --neon-b: #b32cff;
+  --neon-c: #ff2d95;
+  --danger: #ff6b6b;
+  --accent-a: rgba(0,212,255,0.08);
+  --accent-b: rgba(179,44,255,0.06);
+  --panel-border: rgba(255,255,255,0.04);
+  --panel-border-soft: rgba(255,255,255,0.02);
+  --shadow-dark: rgba(2,6,23,0.6);
+  --shadow-soft: rgba(0,0,0,0.18);
+  --focus-outline: rgba(0,212,255,0.12);
+}
+
+/* Theme variables: dark and light. Toggle by setting `document.documentElement.dataset.theme = 'light'|'dark'` */
+:root[data-theme="dark"]{
+  --bg: #05060a;
+  --panel: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.06);
+  --muted: #94a3b8;
+  --text: #e6eef8;
+  --neon: linear-gradient(90deg,#00d4ff,#b32cff,#ff2d95);
+  --neon-a: #00d4ff;
+  --neon-b: #b32cff;
+  --neon-c: #ff2d95;
+  --danger: #ff6b6b;
+  --accent-a: rgba(0,212,255,0.08);
+  --accent-b: rgba(179,44,255,0.06);
+  --panel-border: rgba(255,255,255,0.04);
+  --panel-border-soft: rgba(255,255,255,0.02);
+  --shadow-dark: rgba(2,6,23,0.6);
+  --shadow-soft: rgba(0,0,0,0.18);
+  --focus-outline: rgba(0,212,255,0.12);
+}
+
+:root[data-theme="light"]{
+  --bg: #f7fafc; /* very light */
+  --panel: rgba(2,6,23,0.04);
+  --glass: rgba(2,6,23,0.06);
+  --muted: #475569;
+  --text: #0b1220; /* dark text */
+  --neon: linear-gradient(90deg,#006bff,#7b2cff,#ff2d95);
+  --neon-a: #006bff;
+  --neon-b: #7b2cff;
+  --neon-c: #ff2d95;
+  --danger: #ff6b6b;
+  --accent-a: rgba(0,106,255,0.06);
+  --accent-b: rgba(123,44,255,0.04);
+  --panel-border: rgba(2,6,23,0.04);
+  --panel-border-soft: rgba(2,6,23,0.02);
+  --shadow-dark: rgba(0,0,0,0.12);
+  --shadow-soft: rgba(0,0,0,0.12);
+  --focus-outline: rgba(0,106,255,0.08);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased}
+
+/* Smooth theme transitions for background/text/borders */
+html, body, * {
+  transition: background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease;
+}
+
+/* animated gradient background */
+.bg-canvas{position:fixed;inset:0;z-index:-10;pointer-events:none}
+.bg-gradient{
+  position:absolute;inset:0;background:radial-gradient(circle at 10% 20%, var(--accent-a), transparent 10%), radial-gradient(circle at 90% 80%, var(--accent-b), transparent 10%);
+  animation: bgShift 12s linear infinite;
+}
+@keyframes bgShift{0%{transform:translateY(0)}50%{transform:translateY(-8%)}100%{transform:translateY(0)}}
+
+/* canvas particles fallback (small) */
+.particles-canvas{position:absolute;inset:0;opacity:0.18}
+
+/* glassy panels */
+.panel{background:var(--panel);backdrop-filter: blur(6px) saturate(130%);border:1px solid var(--panel-border);border-radius:10px}
+.panel-strong{background:linear-gradient(180deg, var(--panel-border-soft), rgba(0,0,0,0.02));box-shadow:0 8px 30px var(--shadow-dark)}
+
+/* hero */
+.hero-title{font-family:Orbitron,monospace;font-weight:700;letter-spacing: -0.02em}
+.type-flicker{color:transparent;background-clip:text;-webkit-background-clip:text;background-image:var(--neon)}
+
+/* rip -> subtle brutal border */
+.rip{border-left:3px solid var(--panel-border-soft);padding:0.6rem}
+
+/* focus */
+a:focus,button:focus{outline:2px solid var(--focus-outline);outline-offset:3px}
+
+/* utility for tilt hover */
+.tilt{transform-style:preserve-3d;transition:transform .22s cubic-bezier(.2,.9,.3,1)}
+.tilt:focus,.tilt:hover{transform:perspective(800px) translateZ(6px) rotateX(0.6deg)}
+
+/* responsive tweaks */
+@media (max-width:768px){
+  .hero-title{font-size:2.2rem}
+}
+@keyframes glitchBottom {
+  0% { clip: rect(0,0,0,0);} 
+  30% { clip: rect(40px,9999px,70px,0); transform: translate(2px,1px);} 
+  60% { clip: rect(10px,9999px,30px,0); transform: translate(-2px,-1px);} 
+  100% { clip: rect(0,0,0,0);} 
+}
+
+/* VHS loader */
+.loader {
+  display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--bg);color:var(--text);font-family:var(--font-body);
+}
+.loader .vhs {font-family: 'Staatliches', sans-serif; font-size:28px; letter-spacing:1px}
+
+/* Poster rip */
+.rip {
+  background-image: linear-gradient(135deg, var(--panel-border-soft), rgba(0,0,0,0.12));
+  border-radius: 4px;
+  box-shadow: 0 6px 18px var(--shadow-soft);
+}
+
+/* utility for barcode */
+.barcode {
+  height: 28px;
+  background-image: linear-gradient(90deg, var(--text) 20%, var(--bg) 20%, var(--bg) 24%, var(--text) 24%);
+  background-size: 6px 100%;
+}
