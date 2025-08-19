@@ -73,112 +73,112 @@ const profile = {
       visibility: 'Public (forked)',
       stack: 'Python (FastAPI) + React',
       purpose: 'Full-stack knowledge base search engine (indexing, search, document serving).',
-    thumbnail: '/fullstackkbsearch.png'
+  thumbnail: '/assets/fullstackkbsearch.png'
     },
     {
       name: 'Neural-Ai-Bot',
       visibility: 'Private',
       stack: 'Python (ML) + Node/TypeScript wrapper',
       purpose: 'AI chatbot / conversational assistant using neural models.',
-    thumbnail: '/neural ai.png'
+  thumbnail: '/assets/neural-ai.png'
     },
     {
       name: 'CloudCraftrdev',
       visibility: 'Private (forked)',
       stack: 'React + TypeScript (Firebase/AWS backend)',
       purpose: 'Cloud deployment and developer tooling for infrastructure workflows.',
-    thumbnail: '/cloudcraftr.png'
+  thumbnail: '/assets/cloudcraftr.png'
     },
     {
       name: 'uiappg',
       visibility: 'Private',
       stack: 'TypeScript + React',
       purpose: 'Frontend UI for AppGBot and related interfaces.',
-    thumbnail: '/ui for appgbot.png'
+  thumbnail: '/assets/ui-for-appgbot.png'
     },
     {
       name: 'aiassistant',
       visibility: 'Private',
       stack: 'TypeScript (frontend) + Python (AI backend)',
       purpose: 'AI-driven assistant application integrating models and UI.',
-    thumbnail: '/ai assistant app.png'
+  thumbnail: '/assets/ai-assistant-app.png'
     },
     {
       name: 'appgtesting-master',
       visibility: 'Private',
       stack: 'Python (pytest + test harness)',
       purpose: 'Testing suite and automation for AppGBot workflows.',
-    thumbnail: '/appgbot testing framework.png'
+  thumbnail: '/assets/appgbot-testing-framework.png'
     },
     {
       name: 'chatbot',
       visibility: 'Public',
       stack: 'Python (Flask or similar) / Node.js',
       purpose: 'Basic chatbot project demonstrating NLP and conversational flows.',
-    thumbnail: '/simple chatbot .png'
+  thumbnail: '/assets/simple-chatbot.png'
     },
     {
       name: 'cloudcraftr',
       visibility: 'Private',
       stack: 'TypeScript (React + Node)',
       purpose: 'Cloud automation SaaS project for provisioning and infra tasks.',
-    thumbnail: '/cloudcraftr.png'
+  thumbnail: '/assets/cloudcraftr.png'
     },
     {
       name: 'dietarywellness',
       visibility: 'Public',
       stack: 'TypeScript + React (Express/Firebase backend)',
       purpose: 'Health and diet tracking wellness app.',
-    thumbnail: '/dietary welness.png'
+  thumbnail: '/assets/dietary-welness.png'
     },
     {
       name: 'chatbot_project',
       visibility: 'Private',
       stack: 'Python (NLP/ML backend)',
       purpose: 'Structured chatbot experiments and models.',
-    thumbnail: '/chatbot project.png'
+  thumbnail: '/assets/chatbot-project.png'
     },
     {
       name: 'student-management-java',
       visibility: 'Public',
       stack: 'Java (Spring Boot or similar)',
       purpose: 'CRUD student management system (backend and admin UI).',
-    thumbnail: '/student managment java.png'
+  thumbnail: '/assets/student-managment-java.png'
     },
     {
       name: 'chatbot_support',
       visibility: 'Private (MSP app)',
       stack: 'TypeScript + React + Node',
       purpose: 'Customer support chatbot integration and UI.',
-    thumbnail: '/customer support chatbot.png'
+  thumbnail: '/assets/customer-support-chatbot.png'
     },
     {
       name: 'birdaiclone',
       visibility: 'Private',
       stack: 'TypeScript + Next.js',
       purpose: 'Clone/experiment inspired by BirdAI / AI SaaS features.',
-    thumbnail: '/birdaiclone.png'
+  thumbnail: '/assets/birdaiclone.png'
     },
     {
       name: 'WebDevDynamics',
       visibility: 'Public',
       stack: 'TypeScript + React',
       purpose: 'Web development experiments and dynamic components.',
-    thumbnail: '/webdevdynamics.png'
+  thumbnail: '/assets/webdevdynamics.png'
     },
     {
       name: 'AiSaasStarter',
       visibility: 'Private',
       stack: 'TypeScript + React + Node.js',
       purpose: 'Boilerplate starter for AI SaaS products.',
-    thumbnail: '/aisaasstarter.png'
+  thumbnail: '/assets/aisaasstarter.png'
     },
     {
       name: 'appgtesting',
       visibility: 'Private',
       stack: 'TypeScript (frontend testing app)',
       purpose: 'UI test harness and experiments for AppGBot.',
-    thumbnail: '/appgtesting.png'
+  thumbnail: '/assets/appgtesting.png'
     }
   ],
   volunteering: [

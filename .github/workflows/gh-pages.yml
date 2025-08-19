@@ -27,6 +27,17 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy root images into dist/assets and sanitize names
+        run: |
+          mkdir -p dist/assets
+          shopt -s nullglob || true
+          for f in ./*.png ./*.jpg ./*.jpeg; do
+            [ -f "$f" ] || continue
+            bn=$(basename "$f")
+            sanitized=$(echo "$bn" | tr ' ' '-' | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9._-]+/-/g; s/-\././g; s/-{2,}/-/g; s/^-+//; s/-+$//')
+            cp "$f" "dist/assets/$sanitized"
+          done
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
