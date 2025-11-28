@@ -59,10 +59,18 @@ export default function App(){
         <ThemeToggle />
       </div>
 
-      <nav className="fixed left-4 top-1/3 z-50 flex flex-col gap-2">
-        {Object.keys(sections).map(key=> (
-          <button key={key} onClick={()=> scrollTo(key)} aria-current={active===key} className={`px-3 py-2 rounded ${active===key? 'bg-white/8' : 'bg-white/2'}`}>{key}</button>
-        ))}
+      <nav className="fixed z-50 flex flex-col gap-2 left-4 top-1/3 md:left-4 md:top-1/3">
+        {/* On small screens, pin the nav to the left edge and vertically center */}
+        <div className="hidden sm:flex sm:flex-col sm:gap-2 md:flex md:flex-col">
+          {Object.keys(sections).map(key=> (
+            <button key={key} onClick={()=> scrollTo(key)} aria-current={active===key} className={`px-3 py-2 rounded ${active===key? 'bg-white/8' : 'bg-white/2'}`}>{key}</button>
+          ))}
+        </div>
+        <div className="flex sm:hidden flex-col fixed left-3 top-1/2 transform -translate-y-1/2 gap-2">
+          {Object.keys(sections).map(key=> (
+            <button key={key} onClick={()=> scrollTo(key)} aria-current={active===key} className={`px-2 py-1 rounded text-xs ${active===key? 'bg-white/8' : 'bg-white/2'}`}>{key[0]}</button>
+          ))}
+        </div>
       </nav>
 
       <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8}}>

@@ -187,6 +187,9 @@ const profile = {
   contact: {
     linkedin: 'https://www.linkedin.com/in/ishaan-singh-c007/',
     github: 'https://github.com/ishaandev07',
+    instagram: 'http://instagram.com/ishaancantsingh',
+    // To enable direct form submissions via mailto, set your email here (e.g. 'you@domain.com')
+    email: 'krish.ishaan@gmail.com',
     location: {
       city: 'New Delhi, India',
       coordinates: { lat: 28.6139, lon: 77.2090 }
