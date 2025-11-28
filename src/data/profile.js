@@ -52,6 +52,11 @@ const profile = {
       years: '2019–2023'
     },
     {
+      institution: 'University of Messina',
+      degree: 'Bachelors in Data Analysis',
+      years: '2025–present'
+    },
+    {
       institution: 'Summeral Jain Public School',
       degree: 'High School (Science)'
     }

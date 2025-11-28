@@ -1,5 +1,6 @@
 import React from 'react'
 import profile from '../data/profile'
+import { Link } from 'react-router-dom'
 
 export default function Projects(){
   const items = profile.projects.slice(0,12)
@@ -7,9 +8,12 @@ export default function Projects(){
     <section className="my-16">
       <h3 className="text-3xl font-poster mb-6">Projects</h3>
       <div className="grid md:grid-cols-3 gap-6">
-        {items.map((p,idx)=> (
-          <div key={p.name+idx} tabIndex={0} role="article" aria-label={p.name} className="rip bg-gray-900 p-4 border border-white/5 focus:outline-none focus:ring-2 focus:ring-offset-2 tilt">
-            <img loading="lazy" alt={p.name} src={p.thumbnail || '/assets/project.jpg'} className="w-full h-40 object-cover filter grayscale opacity-90 hover:opacity-70 transition-all rounded" />
+        {items.map((p,idx)=> {
+          const slug = encodeURIComponent(p.name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''))
+          return (
+          <Link key={p.name+idx} to={`/projects/${slug}`} className="focus:outline-none" aria-label={`Open ${p.name}`}>
+            <div tabIndex={0} role="article" className="rip bg-gray-900 p-4 border border-white/5 focus:outline-none focus:ring-2 focus:ring-offset-2 tilt">
+              <img loading="lazy" alt={p.name} src={p.thumbnail || '/assets/project.jpg'} className="w-full h-40 object-cover filter grayscale opacity-90 hover:opacity-70 transition-all rounded" />
             <div className="mt-3 flex items-center justify-between">
               <div className="glitch hover:scale-102" data-text={p.name}>{p.name}</div>
               <div className="barcode w-24" />
@@ -20,7 +24,9 @@ export default function Projects(){
             </div>
             <div className="mt-2 text-xs opacity-60">{p.visibility}</div>
           </div>
-        ))}
+            </div>
+          </Link>
+        )})}
       </div>
     </section>
   )
