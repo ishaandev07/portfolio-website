@@ -1,0 +1,10 @@
+[33m56a36c6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m feat(dependencies): update react-router-dom to version 6.30.2 and consolidate dependencies
+[33m5c7caac[m feat(projects): implement project detail page and routing; add new education entry
+[33m2d43b2f[m feat(contact): add form validation and email functionality; update profile with Instagram and email
+[33med4ee58[m chore(ci): publish root images into dist/assets and point profile thumbnails to /assets
+[33m5ad2d95[m ci: add CNAME for custom domain
+[33m1f67bab[m chore: retrigger deploy for CDN refresh
+[33m08dbb85[m chore: trigger redeploy
+[33mb54acc9[m ci: re-add custom domain CNAME and workflow cname
+[33mb9a9a43[m ci: remove custom domain CNAME and workflow cname
+[33m7110cbe[m ci: add CNAME for custom domain and configure deploy
