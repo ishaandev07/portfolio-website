@@ -47,14 +47,14 @@ const profile = {
   ],
   education: [
     {
-      institution: 'Pusa Institute of Technology',
-      degree: 'Diploma in Electronics and Communications Engineering',
-      years: '2019–2023'
-    },
-    {
       institution: 'University of Messina',
       degree: 'Bachelors in Data Analysis',
       years: '2025–present'
+    },
+    {
+      institution: 'Pusa Institute of Technology',
+      degree: 'Diploma in Electronics and Communications Engineering',
+      years: '2019–2023'
     },
     {
       institution: 'Summeral Jain Public School',
